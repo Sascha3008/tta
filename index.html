@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>Unbenanntes Dokument</title>
+<style>
+body{
+	background:#fff;	
+}
+body > div{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.5em;
+	color:#000;	
+}
+</style>
+<script>
+var txt = '';
+window.onload = function(){
+	var txte = '';
+	if(window.localStorage.getItem('txt') != 'undefined'){
+		txte = window.localStorage.getItem('txt');
+	} else {
+		txte = window.localStorage.setItem('txt','Test2');	
+	}
+	txt = document.getElementById('txt');
+	txt.innerHTML=window.localStorage.getItem('txt');
+	setInterval(function(){
+		var txte = window.localStorage.getItem('txt');
+		if(txt.innerHTML != txte){
+			window.localStorage.setItem('txt',txt.innerHTML);
+		}
+	},500);
+}
+</script>
+</head>
+
+<body>
+<div id="txt" contenteditable="true">Test</div>
+</body>
+</html>

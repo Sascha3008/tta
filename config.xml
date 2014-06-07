@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+		xmlns:android   = "http://schemas.android.com/apk/res/android"
+        id          = "de.sl3008.maha"
+        version     = "1.0.0"
+        versionCode = "10" >
+		<name>MaHa</name>
+
+        <description>Zeug</description>
+
+        <author href="http://www.hansenundtoth.de" email="sascha@hansenundtoth.de">Hansen und Toth GmbH und Co. KG</author>
+  
+		<preference name="DisallowOverscroll" value="true" />
+		<preference name="permissions" value="none"/>
+		<preference name="webviewbounce" value="false" />
+		<preference name="phonegap-version" value="3.3.0" /> <!-- all: current version of PhoneGap -->
+		<preference name="orientation" value="portrait" /> <!-- all: default means both landscape and portrait are enabled -->
+		<preference name="target-device" value="handset" /> <!-- all: possible values handset, tablet, or universal -->
+		<preference name="fullscreen" value="false" /> <!-- all: hides the status bar at the top of the screen -->
+		<preference name="prerendered-icon" value="true" /> <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
+		<!--preference name="ios-statusbarstyle" value="black-opaque" /--> <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->
+		<preference name="detect-data-types" value="true" /> <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
+		<preference name="exit-on-suspend" value="false" /> <!-- ios: if set to true, app will terminate when home button is pressed -->
+		<preference name="auto-hide-splash-screen" value="true" /> <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+		<preference name="disable-cursor" value="true" /> <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
+		<preference name="android-minSdkVersion" value="7" /> <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
+		<preference name="android-installLocation" value="auto" /> 
+		
+		
+		
+		<gap:plugin name="org.apache.cordova.geolocation" />
+		<gap:plugin name="org.apache.cordova.device" />
+		<gap:plugin name="org.apache.cordova.camera" />
+		<gap:plugin name="org.apache.cordova.network-information" />
+		<gap:plugin name="org.apache.cordova.splashscreen" />
+		<gap:plugin name="org.apache.cordova.vibration" />
+		<gap:plugin name="org.apache.cordova.dialogs" />
+		
+		<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">
+    <false/>
+</gap:config-file>
+		
+    <icon src="icon/icon.png" />
+    <icon gap:density="ldpi" gap:platform="android" src="icon/android/icon-36-ldpi.png" />
+    <icon gap:density="mdpi" gap:platform="android" src="icon/android/icon-48-mdpi.png" />
+    <icon gap:density="hdpi" gap:platform="android" src="icon/android/icon-72-hdpi.png" />
+    <icon gap:density="xhdpi" gap:platform="android" src="icon/android/icon-96-xhdpi.png" />
+    <icon gap:platform="ios" height="57" src="icon/ios/icon-57.png" width="57" />
+    <icon gap:platform="ios" height="72" src="icon/ios/icon-72.png" width="72" />
+    <icon gap:platform="ios" height="114" src="icon/ios/icon-57-2x.png" width="114" />
+    <icon gap:platform="ios" height="144" src="icon/ios/icon-72-2x.png" width="144" />
+	
+    <gap:splash gap:density="ldpi" gap:platform="android" src="splash/android/screen-ldpi-portrait.png" />
+    <gap:splash gap:density="mdpi" gap:platform="android" src="splash/android/screen-mdpi-portrait.png" />
+    <gap:splash gap:density="hdpi" gap:platform="android" src="splash/android/screen-hdpi-portrait.png" />
+    <gap:splash gap:density="xhdpi" gap:platform="android" src="splash/android/screen-xhdpi-portrait.png" />
+   
+    <gap:splash gap:platform="ios" height="1136" src="splash/ios/Default_iphone5.png" width="640" />
+    <gap:splash gap:platform="ios" height="480" width="320" src="splash/ios/Default.png" />
+	<gap:splash gap:platform="ios" height="960" width="640" src="splash/ios/Default_at_2x.png" />
+    <access origin="*" />
+</widget>
