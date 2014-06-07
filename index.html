@@ -18,7 +18,7 @@ body > div{
 var txt = '';
 window.onload = function(){
 	var txte = '';
-	if(window.localStorage.getItem('txt') != 'undefined'){
+	if(window.localStorage.getItem('txt') != 'undefined' && window.localStorage.getItem('txt') != 'null' && window.localStorage.getItem('txt') != 'NULL' && window.localStorage.getItem('txt') != null){
 		txte = window.localStorage.getItem('txt');
 	} else {
 		txte = window.localStorage.setItem('txt','Test2');	
